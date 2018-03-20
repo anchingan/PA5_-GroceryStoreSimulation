@@ -6,15 +6,18 @@ Note: parts of this assignment were inspired by Deitel and Deitel’s Supermarke
 
 For this assignment you will need to simulate two lines using queues. This will require that you develop enqueue ( ) (insert), dequeue ( ) (delete), and printQueue ( ) operations for a queue. Although you will instantiate two queues, each one of these will consist of the same kind of queue nodes. Define a queue node in the following manner:
 
-class Data {
+class Data 
+{
 public: // Member functions
+
 private:
      int customerNumber; // Unique identifier; starts at 1; after 24 hours should be reset to 1
      int serviceTime;   // Random time; varies between express and normal lanes; units in minutes
      int totalTime;     // totalTime = serviceTime + sum of serviceTimes of customers in line before this customer; units in minutes
 }; // This memory needs to be allocated on the heap!
 
-class QueueNode {
+class QueueNode 
+{
 public: // Member functions
 private:
      Data *pData;    // The memory for Data will need to be allocated on the heap as well!
@@ -22,7 +25,8 @@ private:
 };
 
 You must also define a queue in the following manner:
-class Queue {
+class Queue 
+{
 public: // Member functions
 private:
      QueueNode *pHead;
